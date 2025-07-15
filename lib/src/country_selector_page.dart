@@ -56,7 +56,7 @@ class CountrySelectorPageState extends CountrySelectorBaseState {
             countries: controller.filteredCountries,
             favorites: controller.filteredFavorites,
             showDialCode: widget.showDialCode,
-            onTap: (country) => widget.onCountrySelected(country.isoCode),
+            onTap: (country) => widget.onCountrySelected(country),
             flagSize: widget.flagSize,
             scrollController: widget.scrollController,
             scrollPhysics: widget.scrollPhysics,

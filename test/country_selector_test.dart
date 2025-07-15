@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_country_selector/flutter_country_selector.dart';
+import 'package:flutter_country_selector/src/search/searchable_country.dart';
 import 'package:flutter_country_selector/src/widgets/_no_result_view.dart';
 import 'package:flutter_country_selector/src/widgets/_search_box.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -14,7 +15,7 @@ void runTests({required bool isPage}) {
   group('CountrySelector', () {
     Widget buildSelector({
       List<IsoCode> favorites = const [],
-      Function(IsoCode)? onCountrySelected,
+      Function(SearchableCountry)? onCountrySelected,
     }) {
       return MaterialApp(
         locale: const Locale('en', ''),

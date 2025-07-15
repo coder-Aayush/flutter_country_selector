@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_country_selector/src/search/searchable_country.dart';
 import 'package:phone_numbers_parser/phone_numbers_parser.dart';
 
 import '_country_selector_controller.dart';
@@ -16,7 +17,7 @@ abstract class CountrySelectorBase extends StatefulWidget {
   final List<IsoCode> favoriteCountries;
 
   /// Callback triggered when user select a country
-  final ValueChanged<IsoCode> onCountrySelected;
+  final ValueChanged<SearchableCountry> onCountrySelected;
 
   /// ListView.builder scroll controller (ie: [ScrollView.controller])
   final ScrollController? scrollController;
@@ -101,7 +102,7 @@ abstract class CountrySelectorBaseState<W extends CountrySelectorBase> extends S
   onSubmitted() {
     final first = controller.findFirst();
     if (first != null) {
-      widget.onCountrySelected(first.isoCode);
+      widget.onCountrySelected(first);
     }
   }
 }
