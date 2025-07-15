@@ -15,6 +15,7 @@ export 'src/country_selector_base.dart';
 export 'src/country_selector_page.dart';
 export 'src/country_selector_sheet.dart';
 export 'src/localization/localization.dart';
+export 'src/search/searchable_country.dart';
 
 abstract class CountrySelector {
   /// on the web, will download flag assets in memory.
